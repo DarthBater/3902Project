@@ -1,0 +1,37 @@
+﻿Name of reviewer - Matt Weiss
+Date - April 5, 2016
+Sprint: 4
+Name of the .cs file being reviewed: PointTextGenerator, SpritePointText
+Author of the .cs file being reviewed: Ryan Bates
+
+Specific comments on code quality:
+
+This was a feature I wasn't expecting to show up from this Sprint as it wasn't required in any of the PBI's. I could be
+wrong and completely missed it, however.
+
+That said, I'm actually quite pleased with how these floating point values were displayed on the screen. The only oddity
+that I'm seeing is that the SpriteText's are added to the CollisionLayer. Sure, this works because I'm not handling collisions
+for SpriteText objects because none of them implement the ICollidable interface, but regardless, it seems like it would be much
+more fitting for them to be added to the HudLayer. I did make a few modifications to the floating point texts. 
+Originally, the texts were positioned where mario was at the time of collision. I noticed this being an issue when I landed on 
+two coins at once, but only saw one "+ 200" SpriteText appear. I promptly changed it to appear at the collided objects' position instead.
+The other change I made was adding a 'position.y--' in the Update for each visible SpriteText.
+
+A design flaw I'm seeing, though some may disagree, is the lack of OOP principles for SpritePointText, and indirectly PointTextGenerator.
+SpritePointText is built in a manner of composition, but using inheritance would have been a much cleaner approach. PointTextGenerator
+defines an Update(GameTime gametime) method, but that is a method that is commonly inherited from the IDrawable interface, which defines
+Update and Draw. Update could have been marked virtual in SpriteText, and overridden in SpritePointText with a call to base, and the added
+functionality to handle the timed disappearance of each SpritePointText. I didn't look, but it's a near guarantee that there are more calls
+to an Update method for the PointTextGenerator, when you could have had it all be inherited via SpriteLayer, since it already has the groundwork
+in place to make a call to SpriteText.Update (SpriteLayer currently doesn't, but that's because no SpriteTexts required the functionality at the time).
+When I see a class named 'PointTextGenerator,' what I think is that it is a class of static methods that act like a Factory. That is the exact
+opposite of what was the case here. PointTextGenerator needed to be instantiated to be used. Also, the PointTextGenerator ended up doing work on behalf 
+of the SpritePointText. It just doesn't seem fluid.
+
+
+Number of minutes taken to complete the review: 15
+
+
+A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change:
+
+I think I already defined what sorts of changes I would make above.

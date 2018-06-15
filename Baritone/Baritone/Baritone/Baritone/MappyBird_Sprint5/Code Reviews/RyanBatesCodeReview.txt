@@ -1,0 +1,28 @@
+﻿Ryan Bates
+Date: 4/19/2016
+Sprint: 5
+Name of the .cs file being reviewed: DynamicLevel.cs
+Author of the .cs file being reviewed: Mostly Matt Weiss
+Specific comments on code quality:
+
+This .cs file essentially puts everything together. Interacts with the layers so the appropriate sprites are displayed. 
+All layers are added to the layer list (from Icollection) in the constructor of DynamicLevel. Problems arise if you were to try
+and add the gameover screen because of the way Update is called from level and dynamic level. If you add an element to the layer list
+that is being drawn errors arise. Because of this you have to do some work arounds in the update method of dynamic level (you see the
+if-else checks to add and remove the gameover screen.) I thought maybe you could have a state-machine type interaction with the layers but
+that doesn't seem to work with the way it is currently, so we sacrifice a little bit of cleaner code. Example, you might want to a call
+to add the gameover screen when mappy collides with a pipe or runs out of time, rather than detecting when the level "stops" in the
+update method of dynamic level. I don't have a solution worked out in my head but you could tinker with the way update and draw work
+with the level and dynamiclevel classes.
+
+
+
+Number of minutes taken to complete the review: 15
+
+
+A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change:
+
+Well flappy bird really only has one "unbeatable" level, so I'm not sure what you would add, but if you were to add more screen and hud interaction, or maybe
+when you get to a certain score the background changes or the pipes change into some other sprite, you would have to add all kinds of checks to the update
+method of this class, which could get messy. If you wanted to make that change it could be worth making a "state-machine" type interaction with the 
+layers that the dynamic level class would use.

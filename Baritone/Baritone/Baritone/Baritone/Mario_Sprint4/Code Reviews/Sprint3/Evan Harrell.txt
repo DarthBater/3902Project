@@ -1,0 +1,19 @@
+﻿Evan Harrell
+3/22
+Sprint: 3
+Name of the .cs file being reviewed: SpriteFireball.cs
+Author of the .cs file being reviewed: Matt Weiss
+Specific comments on code quality:
+
+We've had it for a while, but I don't believe it's been looked at since the initial collision was written for it.  This has 3 methods, move, onCollision,
+and consume.  Move controls the intial movement from mario, leting it curve down, and eventually consume.  onCollision is the inherited method that decides
+what happens when the fireball hits an object, if it's not an enemy, it bounces accordingly, if it is an enemy the object is consumed.  Consume just removes
+the object.  It's simple code, but could possibly use some touch up.
+
+Number of minutes taken to complete the review: 4
+
+
+A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change:
+
+There's currently no limit to the number of fireballs fired at once.  If you spam them, some will float straight away because of collision errors.
+There's also a distance limit to where the fireball goes, which should probably need to be lengthened.

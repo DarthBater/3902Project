@@ -1,0 +1,22 @@
+﻿Evan Harrell
+3/1
+Sprint: 2 
+Name of the .cs file being reviewed: SpriteFactory.cs
+Author of the .cs file being reviewed: Matt Weiss
+Specific comments on code quality:
+
+This file is our factory design pattern for our sprites.  It contains a method for loading the textures from our sprite content folders.  It also contains
+the methods that create (by calling the constructor) and returning the sprite for the game.  These methods are called by our LevelLoader which parses a 
+text file to create the sprites needed for our game.  A few of these methods differ in various ways.  The koopa method takes a parameter for color (red or
+green).  Similarly, there are two mushroom methods that call the constructor for a mushroom using a different sprite path as both 1UP and Super mushrooms
+use the same sprite methods, but just different sprite textures.  Blocks have two methods each, one for an itemless block and one for an item.  The parser
+takes an item argument as an option, and if it is specified calls the block item method which creates a block and an item "in" the block.
+
+Number of minutes taken to complete the review: 14
+
+
+A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change:
+
+We will need to modify the block code most likely to allow for multiple coins, and we may even want to determine block items on collision time rather
+than load time.  We will also need to get rid of the methods for creating hidden and question blocks without items since those blocks are not needed
+for the game as a whole.

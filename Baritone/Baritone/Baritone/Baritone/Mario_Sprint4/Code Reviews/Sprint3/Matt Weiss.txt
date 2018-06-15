@@ -1,0 +1,21 @@
+﻿Matt Weiss
+March 22, 2016
+Sprint: 3
+Name of the .cs file being reviewed: ResetKeyListener.cs
+Author of the .cs file being reviewed: Nick Chehade
+
+Specific comments on code quality:
+
+There are a handful of ways to implement a reset; the way this one was implemented is a bit "raw" in the sense
+that it's doing it primarily by brute force. Honestly though, it's simple, and it works. The only concern would
+be if it truely is releasing ALL resources from the level and loading fresh ones. Otherwise, too many resets and
+we will have a memory build up, perhaps a noticeable one.
+
+
+Number of minutes taken to complete the review: 5
+
+
+A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change:
+
+As I already hinted at, there may be a memory issue. I haven't looked into it to confirm this, but whenever you're clearing and re-populating lists like this,
+it's always going to be a concern.

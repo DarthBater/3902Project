@@ -1,0 +1,29 @@
+﻿Matt Weiss
+March 1, 2016
+Sprint: 2
+Name of the .cs file being reviewed: SpriteMario.cs (Namely, the Sprint2 additions)
+Author of the .cs file being reviewed: Ryan Bates / Nick Chehade
+
+Specific comments on code quality:
+
+I'm primarily looking at how collision were implemented. That said, the first thing I noticed was that an Injure
+method was added which handles the various state changes when Mario interacts with an enemy.
+The function creates a timer for Star and Fire, and adjusts sheet and sprite states accordingly.
+More on this in the changes section
+
+The second thing I looked for was how collisions with other various objects were handled. They weren't handled
+in SpriteMario, which is actually a good thing. Collisions were handled in the appropriate classes, such as
+SpriteGoomba or SpriteFloor.
+
+I'm curious as to why the star state is being tracked in OnCollision. This will likely be changed when our
+State Machine is added, but even without the SM, this makes no sense as to why it is tracked in OnCollision.
+
+
+Number of minutes taken to complete the review: 7
+
+
+A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change:
+
+So this was determined before code reviews, but these implementations will likely all change when we get around
+to implementing a State Machine for both movement states and powerup states. These changes will take place
+sometime in the near future considering the vast majority of Sprint 3 is already done.

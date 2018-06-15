@@ -1,0 +1,12 @@
+﻿Name of reviewer
+Date
+Sprint: 
+Name of the .cs file being reviewed: 
+Author of the .cs file being reviewed: 
+Specific comments on code quality:
+
+
+Number of minutes taken to complete the review: 
+
+
+A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change:

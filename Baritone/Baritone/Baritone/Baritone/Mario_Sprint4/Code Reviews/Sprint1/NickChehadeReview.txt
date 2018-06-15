@@ -1,0 +1,7 @@
+﻿Nick Chehade
+02/16/16
+Sprint 1
+SpriteKoopa.cs
+Matt Weiss and Ryan Bates
+5 minutes
+The code is advanced and makes good use of threads to animate the koopa.  A hypothetical change would maybe be to make the info bounds attained via a static memember instead of the method getBounds(). It would be an easy fix. And looking forward, the setBounds method will be a good starting point for collision boxes.

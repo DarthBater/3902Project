@@ -1,0 +1,10 @@
+﻿Nick Chehade
+03/01/16
+Sprint 2 
+CollisionHandler.cs 
+Matt Weiss
+Although the code is implemented naively (by checking every dynamic object against every static object), it is fitting for this game and it is very thorough in its implementation. The additional debugging mode is very helpful when dealing with bugs.
+
+
+5 minutes 
+The class is rather lengthy (although that is almost the nature of the collision handler since it must check for all those different cases) and I think it might be better to split it up into a couple of separate classes. I think handleStop could just be its own class.

@@ -1,0 +1,19 @@
+﻿Ryan Bates
+4-05-2016
+Sprint: 4
+Name of the .cs file being reviewed: HuDLayer.cs
+Author of the .cs file being reviewed: Matt Weiss
+Specific comments on code quality:
+
+Uses SpriteLayer interface to effectively remove code from Sprint3, which really cleans it up. Works well with SpriteLayer in
+that you can easily add and remove sprites from the hud. I think the game inputs could potentially be placed somewhere else
+which would keep the HuDLayer class strictly involve the HuD.
+
+
+Number of minutes taken to complete the review: 10
+
+
+A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change:
+
+If we were to add different fonts for the HuD or add custom fonts to mimic super mario a little better, you would have to change a few lines
+of code but the actual class would not fail. 

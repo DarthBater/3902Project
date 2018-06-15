@@ -1,0 +1,20 @@
+﻿Ryan Bates
+3-1-2016
+Sprint: 2
+Name of the .cs file being reviewed: SpriteBlock.cs
+Author of the .cs file being reviewed: Evan Harrell
+Specific comments on code quality:
+
+Follows general outline we have for most of our sprites. It is on par with our other sprite .cs files. Has the ability to hold an item, which
+is held in the item global variable. A lot of the checks are done manually since we don't have a state machine at the moment. This is a common
+theme for all of our sprite files. Example of this in the OnCollision method we check to make sure the block is not already broken.
+
+
+Number of minutes taken to complete the review: 
+
+
+A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change:
+
+Group has expressed interest in creating the state machine, in which case there will be some code in this file that will be made redundant. 
+We would have to do some rewriting here, and almost all of our other sprite files, if we do decide to go down this path. However, it has the 
+potential to make the game much easier to read and easier to add future content.

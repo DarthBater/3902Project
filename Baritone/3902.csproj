@@ -1,0 +1,347 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{5BDB5A8C-1AA4-438D-9AFF-02DE82B9597C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>_3902</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
+    <Content Include="Baritone\Baritone.sln" />
+    <Content Include="Baritone\Baritone\BaritoneContent\MarioSprites\Blocks.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\MarioSprites\Enemies.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\MarioSprites\flag.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\MarioSprites\flagpole.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\MarioSprites\Items.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\MarioSprites\Mario.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\MarioSprites\Obstacles.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\MarioSprites\World1-1.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Music\axelf.mp3" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Music\background.mp3" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Music\blockbump.wav" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Music\brickbreak.wav" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Music\coin.wav" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Music\death.wav" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Music\gameover.wav" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Music\invincible.mp3" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Music\jump.wav" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Music\kick.wav" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Music\OneUp.wav" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Music\pause.wav" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Music\powerdown.wav" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Music\powerup.wav" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Music\powerupappear.wav" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Music\spedbackground.mp3" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Music\timeending.wav" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Music\youwin.wav" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Background.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Blocks\brick.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Blocks\broken_brick.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Blocks\broken_brick2.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Blocks\hidden.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Blocks\question.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Blocks\used.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Enemies\Goomba\dead.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Enemies\Goomba\idle.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Enemies\Koopa\Green\flying.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Enemies\Koopa\Green\moving.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Enemies\Koopa\Green\shell.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Enemies\Koopa\Red\flying.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Enemies\Koopa\Red\moving.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Enemies\Koopa\Red\shell.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Enemies\Piranha Plant\idle.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\HuD\gameover.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\HuD\welcome.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\HuD\youlose.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\HuD\youwin.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Items\coin.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Items\fireflower.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Items\oneupshroom.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Items\star.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Items\supershroom.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Fire\Large\crouching.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Fire\Large\idle.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Fire\Large\jumping.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Fire\Large\walking.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Fire\Small\dead.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Fire\Small\idle.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Fire\Small\jumping.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Fire\Small\walking.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\mappy.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Normal\Large\crouching.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Normal\Large\idle.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Normal\Large\jumping.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Normal\Large\walking.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Normal\Small\dead.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Normal\Small\idle.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Normal\Small\jumping.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Normal\Small\walking.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Star\Large\crouching.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Star\Large\idle.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Star\Large\jumping.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Star\Large\walking.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Star\Small\dead.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Star\Small\idle.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Star\Small\jumping.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Mario\Star\Small\walking.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Obstacles\fireball.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Obstacles\floor.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Obstacles\pair.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Obstacles\pipetop.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Obstacles\pipe_tall.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Obstacles\stair.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Scenery\cloud_large.png" />
+    <Content Include="Baritone\Baritone\BaritoneContent\Sprites\Scenery\cloud_small.png" />
+    <Content Include="Baritone\Baritone\Baritone\Baritone.csproj" />
+    <Content Include="Baritone\Baritone\Baritone\Baritone.sln" />
+    <Content Include="Baritone\Baritone\Baritone\Game.ico" />
+    <Content Include="Baritone\Baritone\Baritone\GameThumbnail.png" />
+    <Content Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Code Reviews\EvanHarrellCodeReview.txt" />
+    <Content Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Code Reviews\NickChehade.txt" />
+    <Content Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Code Reviews\RyanBatesCodeReview.txt" />
+    <Content Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Code Reviews\Template.txt" />
+    <Content Include="Baritone\Baritone\Baritone\Mario_Sprint4\Code Reviews\Sprint1\BatesReview.txt" />
+    <Content Include="Baritone\Baritone\Baritone\Mario_Sprint4\Code Reviews\Sprint1\Matt Weiss.txt" />
+    <Content Include="Baritone\Baritone\Baritone\Mario_Sprint4\Code Reviews\Sprint1\NickChehadeReview.txt" />
+    <Content Include="Baritone\Baritone\Baritone\Mario_Sprint4\Code Reviews\Sprint2\Evan Harrell.txt" />
+    <Content Include="Baritone\Baritone\Baritone\Mario_Sprint4\Code Reviews\Sprint2\Matt Weiss.txt" />
+    <Content Include="Baritone\Baritone\Baritone\Mario_Sprint4\Code Reviews\Sprint2\NickChehade.txt" />
+    <Content Include="Baritone\Baritone\Baritone\Mario_Sprint4\Code Reviews\Sprint2\Ryan Bates.txt" />
+    <Content Include="Baritone\Baritone\Baritone\Mario_Sprint4\Code Reviews\Sprint3\Evan Harrell.txt" />
+    <Content Include="Baritone\Baritone\Baritone\Mario_Sprint4\Code Reviews\Sprint3\Matt Weiss.txt" />
+    <Content Include="Baritone\Baritone\Baritone\Mario_Sprint4\Code Reviews\Sprint3\NickChehade.txt" />
+    <Content Include="Baritone\Baritone\Baritone\Mario_Sprint4\Code Reviews\Sprint3\Ryan Bates.txt" />
+    <Content Include="Baritone\Baritone\Baritone\Mario_Sprint4\Code Reviews\Sprint4\EvanHarrell.txt" />
+    <Content Include="Baritone\Baritone\Baritone\Mario_Sprint4\Code Reviews\Sprint4\MattWeiss.txt" />
+    <Content Include="Baritone\Baritone\Baritone\Mario_Sprint4\Code Reviews\Sprint4\NickChehade.txt" />
+    <Content Include="Baritone\Baritone\Baritone\Mario_Sprint4\Code Reviews\Sprint4\Ryan Bates.txt" />
+    <Content Include="Baritone\Baritone\Baritone\Mario_Sprint4\Code Reviews\Template.txt" />
+    <Content Include="Baritone\Baritone\Baritone\Mario_Sprint4\Data\Levels\Sprint2Level.txt" />
+    <Content Include="Baritone\Baritone\Baritone\Mario_Sprint4\Data\Levels\Sprint4Level.txt" />
+    <Content Include="Baritone\Baritone\Baritone\UpgradeLog.htm" />
+    <Content Include="Baritone\UpgradeLog.htm" />
+    <Content Include="Baritone\UpgradeLog2.htm" />
+    <Content Include="Baritone\UpgradeLog3.htm" />
+    <Content Include="Baritone\UpgradeLog4.htm" />
+    <Content Include="Baritone\UpgradeLog5.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\pre-receive.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\master" />
+    <None Include=".git\logs\refs\remotes\origin\HEAD" />
+    <None Include=".git\objects\pack\pack-f6b788c10177e87f4f9d136592248c2a7d286bb0.idx" />
+    <None Include=".git\objects\pack\pack-f6b788c10177e87f4f9d136592248c2a7d286bb0.pack" />
+    <None Include=".git\packed-refs" />
+    <None Include=".git\refs\heads\master" />
+    <None Include=".git\refs\remotes\origin\HEAD" />
+    <None Include=".vs\Baritone\v15\.suo" />
+    <None Include=".vs\ProjectSettings.json" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="Baritone\Baritone\.vs\Baritone\v15\.suo" />
+    <None Include="Baritone\Baritone\.vs\ProjectSettings.json" />
+    <None Include="Baritone\Baritone\.vs\slnx.sqlite" />
+    <None Include="Baritone\Baritone\.vs\VSWorkspaceState.json" />
+    <None Include="Baritone\Baritone\BaritoneContent\BaritoneContent.contentproj" />
+    <None Include="Baritone\Baritone\BaritoneContent\Fonts\arial.spritefont" />
+    <None Include="Baritone\Baritone\BaritoneContent\Fonts\Emulogic.spritefont" />
+    <None Include="Baritone\Baritone\BaritoneContent\MarioSprites\Thumbs.db" />
+    <None Include="Baritone\Baritone\BaritoneContent\Sprites\HuD\Thumbs.db" />
+    <None Include="Baritone\Baritone\Baritone\.vs\Baritone\v15\.suo" />
+    <None Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Code Reviews\NickChehade" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Sprint5.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Utils\CollisionHandler.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Utils\FontFactory.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Utils\SoundHandler.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Utils\SpriteFactory.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Utils\SpriteUtils.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Direction.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Game\Layer.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Game\Level.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Game\Levels\One\DynamicLevel.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Game\Levels\One\Layers\Background\BackgroundLayer.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Game\Levels\One\Layers\Background\BackgroundLayerClouds.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Game\Levels\One\Layers\Background\BackgroundLayerMountains.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Game\Levels\One\Layers\Background\Listeners\ExitListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Game\Levels\One\Layers\Background\Listeners\FlapListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Game\Levels\One\Layers\Background\Listeners\MuteListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Game\Levels\One\Layers\Collision\CollisionLayer.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Game\Levels\One\Layers\GameOver\GameOverLayer.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Game\Levels\One\Layers\HuD\HuDLayer.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Game\Levels\One\Layers\Welcome\WelcomeLayer.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Game\Levels\One\Sound\L1SoundHandler.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Game\Listeners\ResetListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Game\Sprite.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Game\SpriteText.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\ICollidable.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\IDrawable.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\ILoadable.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\InputController.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Input\InputControllerGamePad.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Input\InputControllerKeyboard.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Input\InputControllerMouse.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\IRestorable.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\KeyListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\SpriteMap.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\SpriteSheet.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\SpriteState.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Sprites\SpriteCloudLarge.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Sprites\SpriteCloudSmall.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Sprites\SpriteCoin.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Sprites\SpriteGameOver.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Sprites\SpriteMappy.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Sprites\SpriteMountains.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Sprites\SpritePipe.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\MappyBird_Sprint5\Wrappers\Sprites\SpriteWelcomeScreen.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Input\Impl\InputControllerGamePad.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Input\Impl\InputControllerImpl.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Input\Impl\InputControllerKeyboard.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Input\InputController.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Input\KeyEvent.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprint4.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\PointTextGenerator.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\SpriteBackground.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\SpriteBlock.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\SpriteBrickBlock.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\SpriteBrokenBrick.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\SpriteCoin.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\SpriteFireball.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\SpriteFireFlower.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\SpriteFlag.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\SpriteFlagpole.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\SpriteFloor.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\SpriteGameOver.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\SpriteGoomba.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\SpriteHiddenBlock.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\SpriteKoopa.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\SpriteMario.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\SpriteMushroom.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\SpritePipe.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\SpritePointText.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\SpriteQuestionBlock.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\SpriteStair.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\SpriteStar.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\SpriteUsedBlock.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Sprites\SpriteYouWin!.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\States\Mario\StateMachineMarioAction.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\States\Mario\StateMario.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\States\Mario\StateMarioDead.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\States\Mario\StateMarioFalling.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\States\Mario\StateMarioIdle.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\States\Mario\StateMarioJump.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\States\Mario\StateMarioWalking.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\States\Powerups\StateMachineMarioPowerup.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\States\Powerups\StatePowerup.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\States\Powerups\StatePowerupFire.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\States\Powerups\StatePowerupNormal.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\States\Powerups\StatePowerupStar.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\States\Powerups\StatePowerupSuper.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Utils\CollisionHandler.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Utils\LevelLoader.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Utils\SoundFactory.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Utils\SpriteFactory.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Utils\SpriteStates.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Utils\SpriteUtils.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Direction.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\ICollidable.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\IDrawable.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\IRevealable.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\ITrackable.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\KeyListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Layers\CollisionLayer.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Layers\GameOverLayer.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Layers\HuDLayer.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Layers\YouWin!Layer.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Listeners\ExitKeyListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Listeners\FireMarioKeyListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Listeners\MarioCrouchKeyListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Listeners\MarioDashFireballKeyListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Listeners\MarioJumpKeyListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Listeners\MarioMovementKeyListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Listeners\MuteListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Listeners\Old\BrickBlockKeyListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Listeners\Old\DeadMarioKeyListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Listeners\Old\HiddenBlockKeyListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Listeners\Old\KillGoombaListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Listeners\Old\LandOnKoopaListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Listeners\Old\QuestionBlockKeyListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Listeners\Old\ResetBlockStatesKeyListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Listeners\Old\StarMarioKeyListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Listeners\Old\StompGoombaListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Listeners\Old\UsedBlockKeyListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Listeners\PauseKeyListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Listeners\ResetKeyListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Listeners\StandardMarioKeyListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Listeners\SuperMarioKeyListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\Listeners\VolumeListener.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\SpriteCollection.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\SpriteInfo.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\SpriteLayer.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Mario_Sprint4\Wrappers\SpriteText.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Program.cs" />
+    <Compile Include="Baritone\Baritone\Baritone\Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\refs\tags\" />
+    <Folder Include=".vs\3902\v15\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

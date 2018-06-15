@@ -1,0 +1,15 @@
+﻿Matt Weiss
+February 16, 2016
+Sprint 1
+Sprites/SpriteBlock.cs
+Evan Harrell
+
+The class is a base class for all blocks, so having a Bump method that can be inherited is definitely ideal.
+An abstract Handle method is also ideal since each block will be handled differently.
+All in all, the code is written well, but to be realistic, things will likely need changed
+in the future to account for changes that are yet to come.
+
+~ 4 minutes
+
+Naturally, a lot of things will change. For example, when collision detection gets added, for this class specifically,
+we may need to change what sorts of parameters are passed into the Handle function

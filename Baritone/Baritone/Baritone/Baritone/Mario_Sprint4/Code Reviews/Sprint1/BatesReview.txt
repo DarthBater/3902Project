@@ -1,0 +1,20 @@
+﻿Ryan Bates
+2/16/2016
+Sprint: 1
+Name of the .cs file being reviewed: SpriteCollection.cs
+Author of the .cs file being reviewed: Matt Weiss
+Specific comments on code quality:
+
+Class is a cleverly written, essential use of the IDrawable interface. It is used by all the sprites we created. 
+The dictionary statemap made it really easy to switch the drawn sprite during run time.
+It allows us to switch between states too, not just the drawn sprite. 
+I thought this was a clever way to go about it and thought he did a great job.
+
+Number of minutes taken to complete the review: 7
+
+
+A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change:
+
+When we continue adding features to our game, such as levels, or adding methods to certain sprites, this class is pretty robust. This class will support
+changes well and most changes will be taken elsewhere in the code. This class has proven to be a staple in the game implementation. I am confident that
+it will remain a sturdy, reliable class.

@@ -1,0 +1,12 @@
+﻿Nick Chehade
+04/19/16
+Sprint 5
+CollisionLayer.cs
+Matt Weiss
+
+This layer is in charge of dynamically adding pipes and coins as mario progresses throughout the game. Coins are added with chance at random locations. Pipes are added at specific x differences with different gaps between the top and bottom pipe. This is also where the pipes are checked for removal and passing.
+
+
+10 minutes
+
+It would probably be cleaner to take the code out of Load that is in charge of generating a new pipe and put that into its own method. And the same would go for the coin generation. That way, the Load method would just have to call a method to generate the next pipe and coin based on the given conditions and then add these sprites to the game.

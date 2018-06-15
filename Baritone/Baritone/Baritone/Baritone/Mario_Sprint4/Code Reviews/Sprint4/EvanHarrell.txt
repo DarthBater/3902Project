@@ -1,0 +1,17 @@
+﻿Evan Harrell
+04/05/16
+Sprint 4
+SpriteInfo.cs 
+Matt Weiss
+
+Sprite info contains the basic information used with all sprites, positions, velocities, accelerations, height and width, whether it's static, manually
+moved, or bounces.  It contains the value for the layer the sprite is in, as well as the frame count, delay, and bounds for animated sprites.  Allowing
+each sprite to have it's own info makes it easier to store all the data for those sprites into one location, sprite.Info.  Without this we'd have a cluster
+of data in each sprite class, much of which would be copied and identical code to the other classes.  Changing the parameters for one piece of info in one
+sprite would require a change in all of them, this way we only need to change one piece of SpriteInfo to spread the change across all the sprites.
+
+10 minutes
+
+I don't see much of a problem with how it is now, however, if the game were more advanced I would suggest seperating some of the information more.
+Animation info combined with position info and other sprite info (bounce, bounds, layer, etc.) starts to add up quickly and may make things more difficult
+the more there is.

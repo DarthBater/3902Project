@@ -1,0 +1,18 @@
+﻿Ryan Bates
+3-22-2016
+Sprint: 3
+Name of the .cs file being reviewed: SpriteMushroom.cs
+Author of the .cs file being reviewed: Recent changes were Matt Weiss and Evan Harrell.
+Specific comments on code quality:
+
+It is set up with most of our like-Sprites. But it has some problems. We haven't started using our state machine so for condition checking
+it is missing a few cases. For example, it is currently missing the case to pick up the mushroom as star mario. We've neglected to fix this
+while we work on the state machine, so the file poses a few issues. 
+
+
+Number of minutes taken to complete the review: 11
+
+
+A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change:
+
+When state machine is implemented we will have to refactor quite a bit of the code, along with a few other sprites. 

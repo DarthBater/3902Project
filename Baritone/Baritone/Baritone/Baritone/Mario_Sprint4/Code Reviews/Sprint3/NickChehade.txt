@@ -1,0 +1,10 @@
+﻿Nick Chehade
+03/22/16
+Sprint 3
+ResetKeyListener.cs 
+Nick Chehade
+The code to reset the game is somewhat naive in that it literally removes every single sprite from the content and collision handler and then reloads them. However, it does not reload Mario it just resets his poisition.
+
+
+10 minutes 
+The code in OnPress might have to be refactored out for Sprint4 since it will be utilized when Mario dies or when time runs out. It also might be more effective to only reset sprites that have moved or changed states (there is no reason the floor and the stairs should be reloaded).

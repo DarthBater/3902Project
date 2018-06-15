@@ -1,0 +1,11 @@
+﻿Nick Chehade
+04/05/16
+Sprint 4
+SpriteUtils.cs 
+Matt Weiss
+
+A lot of the functionality of this code is old and is perfectly fine. I was just focusing in on the Reveal function because I was made aware of a minor setback when working with it while creating the multiple hidden coin functionality. Per usual, all of Matt's code is very sound and concise. RevealItem starts a new delegate and calls revealItem which does the actual work of revealing the item, which is what I wanted to hypothetically change.
+
+
+10 minutes
+When implementing reveal for the coins, Matt noted that the coin reveal is too slow (since they were being revealed at the same rate as a normal object). In order to change this, I essentially copied and pasted the revealItem method in SpriteUtils into the Reveal for SpriteCoin. The only thing I changed was the coin's y velocity. In order to avoid situations like this in the future, it would maybe help to have a revealSpeed property that each item possesed.

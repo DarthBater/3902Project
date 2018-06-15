@@ -1,0 +1,29 @@
+﻿Evan Harrell
+4/19
+Sprint: 5 
+Level.cs
+Author of the .cs file being reviewed: Matt Weiss
+Specific comments on code quality:
+
+The Level file holds the various parts of the whole level.  It holds the value for score, the camera and tracks the time limit.  It also holds a list of
+layers the various layers make up the part of the game.  It has methods to add and remove layers to this list.  It's update method calls the updates for
+the various layers, and tracks the time limit.  The draw method calls the draw method for each layer in the list.  The restore method contains the code for
+restarting the game, setting the score, time, and camera back to their initial settings, and calling each layers restore setting.
+
+This file is really useful in managing a multi-layer game.  There's an easy way to add (or remove) new layers (which I found out when creating the HuD
+layer).  In addition, in the main Sprint5 update method we don't need to call the method for each layer of the game, instead just calling the update method
+for the current level of the game, saving space and preventing repetative code from clogging up the main update method.  Level allows us to divide up the
+layers, interate easily, and modify/update them all at once rather than one at a time.  All in all, level is a very useful class for managing the several
+layers of the game (and any more that would be added).
+
+
+
+Number of minutes taken to complete the review: 14
+
+
+A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change:
+
+Not sure if the time limit should be handled by the level itself.  I know there is only one level in flappy bird but if there were multiple levels, the time
+limit would only need to be handled by it if it varied by level.  The same applies to the score value and the camera.  If all three are standard throughout
+the various levels of a game, they would need to be handled elsewhere.  For the purpose of our game, there really isn't any issue here as there is only
+one continuous level, but it's something to be aware of.
